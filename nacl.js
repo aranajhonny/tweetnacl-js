@@ -1162,9 +1162,8 @@ nacl.setPRNG = function(fn) {
       for (i = 0; i < n; i++) x[i] = v[i];
       cleanup(v);
     });
-  } else if (typeof require !== 'undefined') {
-    // Node.js.
-     console.log('failed');
+  } else {
+    console.log('failed to get crypto');
   }
 })();
 
